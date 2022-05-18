@@ -39,7 +39,7 @@ const Register = () => {
 
                 <div className="form-group">
                     <label htmlFor="fullname">Full Name</label>
-                    <input type="text" className="form-control" id="fullname" name="fullname"
+                    <input type="text" className="form-control login_input" id="fullname" name="fullname"
                     onChange={handleChangeInput} value={fullname}
                     style={{background: `${alert.fullname ? '#fd2d6a14' : ''}`}} />
                     
@@ -50,7 +50,7 @@ const Register = () => {
 
                 <div className="form-group">
                     <label htmlFor="username">User Name</label>
-                    <input type="text" className="form-control" id="username" name="username"
+                    <input type="text" className="form-control login_input" id="username" name="username"
                     onChange={handleChangeInput} value={username.toLowerCase().replace(/ /g, '')}
                     style={{background: `${alert.username ? '#fd2d6a14' : ''}`}} />
                     
@@ -61,7 +61,7 @@ const Register = () => {
 
                 <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" name="email"
+                    <input type="email" className="form-control login_input" id="exampleInputEmail1" name="email"
                     onChange={handleChangeInput} value={email}
                     style={{background: `${alert.email ? '#fd2d6a14' : ''}`}} />
                     
@@ -76,7 +76,7 @@ const Register = () => {
                     <div className="pass">
                         
                         <input type={ typePass ? "text" : "password" } 
-                        className="form-control" id="exampleInputPassword1"
+                        className="form-control login_input" id="exampleInputPassword1"
                         onChange={handleChangeInput} value={password} name="password"
                         style={{background: `${alert.password ? '#fd2d6a14' : ''}`}} />
 
@@ -96,7 +96,7 @@ const Register = () => {
                     <div className="pass">
                         
                         <input type={ typeCfPass ? "text" : "password" } 
-                        className="form-control" id="cf_password"
+                        className="form-control login_input" id="cf_password"
                         onChange={handleChangeInput} value={cf_password} name="cf_password"
                         style={{background: `${alert.cf_password ? '#fd2d6a14' : ''}`}} />
 
@@ -127,7 +127,7 @@ const Register = () => {
                     </label>
                 </div>
                 
-                <button type="submit" className="btn btn-dark w-100">
+                <button type="submit" className="btn btn-dark w-100 login_btn">
                     Register
                 </button>
 

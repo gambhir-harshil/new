@@ -1,0 +1,33 @@
+.grid-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 200px;
+
+}
+
+.grid-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.grid-item span{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.util-head{
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.grid-item img{
+  height: 100px;
+  width: 100px;
+}

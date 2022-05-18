@@ -30,46 +30,41 @@ const Login = () => {
     }
 
     return (
-        <div className="auth_page">
-            <form onSubmit={handleSubmit}>
-                <h3 className="text-uppercase text-center mb-4">WE Social</h3>
-
-                <div className="form-group">
-                    <label htmlFor="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" name="email"
-                    aria-describedby="emailHelp" onChange={handleChangeInput} value={email} />
-                    
-                    <small id="emailHelp" className="form-text text-muted">
-                        We'll never share your email with anyone else.
-                    </small>
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="exampleInputPassword1">Password</label>
-
-                    <div className="pass">
-                        
-                        <input type={ typePass ? "text" : "password" } 
-                        className="form-control" id="exampleInputPassword1"
-                        onChange={handleChangeInput} value={password} name="password" />
-
-                        <small onClick={() => setTypePass(!typePass)}>
-                            {typePass ? 'Hide' : 'Show'}
-                        </small>
-                    </div>
-                   
-                </div>
-                
-                <button type="submit" className="btn btn-dark w-100"
-                disabled={email && password ? false : true}>
-                    Login
-                </button>
-
-                <p className="my-2">
-                    You don't have an account? <Link to="/register" style={{color: "crimson"}}>Register Now</Link>
-                </p>
-            </form>
-        </div>
+        <>
+        <div className="whole">
+        <div className="login_container" id="container">
+	    <div className="form-container sign-in-container">
+		<form className="loginform" onSubmit={handleSubmit}>
+			<h1 className='head_sign'>Sign in</h1>
+			<input className="login_input" type="email" placeholder="Email" id="exampleInputEmail1" name="email"
+             onChange={handleChangeInput} value={email}/>
+            <div className="pass">
+			<input className="login_input" type={ typePass ? "text" : "password" }  placeholder="Password" id="exampleInputPassword1"
+                   onChange={handleChangeInput} value={password} name="password"/>
+            <small onClick={() => setTypePass(!typePass)}>
+                    {typePass ? 'Hide' : 'Show'}
+            </small>
+            </div>
+			<button className='login_btn'>Sign In</button>
+		</form>
+	</div>
+	<div className="overlay-container">
+		<div className="overlay">
+			<div className="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button type="submit" className="ghost" id="signIn" disabled={email && password ? false : true}>Sign In</button>
+			</div>
+			<div className="overlay-panel overlay-right">
+				<h1>We Social</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button className="ghost login_btn" id="signUp"><Link className="signup" to="/register">Sign Up</Link></button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+        </>
     )
 }
 

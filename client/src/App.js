@@ -7,6 +7,7 @@ import PrivateRouter from './customRouter/PrivateRouter'
 import Home from './pages/home'
 import Login from './pages/login'
 import Register from './pages/register'
+import Utils from './pages/Utils';
 
 import Alert from './components/alert/Alert'
 import Header from './components/header/Header'
@@ -82,6 +83,7 @@ function App() {
           
           <Route exact path="/" component={auth.token ? Home : Login} />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/utilities" component={Utils} />
 
           <PrivateRouter exact path="/:page" component={PageRender} />
           <PrivateRouter exact path="/:page/:id" component={PageRender} />

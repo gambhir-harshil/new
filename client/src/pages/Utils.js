@@ -14,7 +14,7 @@ const Utils = () => {
     <div className="grid-container">
         <div className='grid-item'><a href='https://beefilm.netlify.app/'><img src={video}/></a><span>Beefilms</span></div>
         <div className='grid-item'><a href='https://velvety-kheer-7a4e66.netlify.app/'><img src={sun}/></a><span>We Weather</span></div>
-        <div className='grid-item'><a href='https://ecommerce087439.netlify.app/'><img src={shopping}/></a><span>WeComm</span></div>
+        <div className='grid-item'><a href='https://ecom0980.herokuapp.com/'><img src={shopping}/></a><span>WeComm</span></div>
         <div className='grid-item'><a href='https://charming-salmiakki-e67ea2.netlify.app/'><img src={calender}/></a><span>WeCalender</span></div>
         <div className='grid-item'><a href='https://wetrack111.netlify.app/'><img src={money}/></a><span>WeFinance</span></div>
     </div>
